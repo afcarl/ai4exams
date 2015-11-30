@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="eqa.css">
 <script type="text/javascript">
 var entries = [
-  {author:"Jason Weston, Antoine Bordes, Sumit Chopra, Alexander M. Rush, Bart van Merriënboer &amp; Tomas Mikolov",
+  {author:"Jason Weston, Antoine Bordes, Sumit Chopra, Alexander M. Rush, Bart Van Merri&euml;nboer, and Tomas Mikolov",
     title:"Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks",
     year:"2016",
     data:["babi"],
@@ -13,7 +13,7 @@ var entries = [
   {author:"Karl Moritz Hermann, Tom&#xe1;&#x0161; Ko&#x010d;isk&#xfd;&#x201a; Edward Grefenstette, Lasse Espeholt, Will Kay, Mustafa Suleyman, and Phil Blunsom",
     title:"Teaching Machines to Read and Comprehend",
     year:"2015",
-    data:["deepmind-dailymail"], 
+    data:["dailymail"], 
     link:"_papers/1506.03340.pdf",
     bib:"_bib/1506.03340.bib"
   },
@@ -23,6 +23,13 @@ var entries = [
     data:["mctest"], 
     link:"_papers/D15-1197.pdf",
     bib:"_bib/D15-1197.bib"
+  },
+  {author:"Mrinmaya Sachan, Kumar Dubey, Eric Xing, and Matthew Richardson", 
+    title:"Learning Answer-Entailing Structures for Machine Comprehension", 
+    year:"2015", 
+    data:["mctest"], 
+    link:"_papers/P15-1024.pdf", 
+    bib:"_bib/P15-1024.bib"
   },
   {author:"Hai Wang, Mohit Bansal, Kevin Gimpel, and David McAllester", 
     title:"Machine Comprehension with Syntax, Frames, and Semantics", 
@@ -84,6 +91,12 @@ function format(entry) {
   else {
     str += "[<a href=" + entry.bib + ">bib</a>]"
   }
+  if (entry.data.length > 0) {
+	for (var i = 0; i < entry.data.length; i++) {
+	  var dname = entry.data[i];
+      str += "[<a href='results.html#" + dname + "' class='" + dname + "button'>" + dname + "</a>]" 
+    }	
+  }
   return str
 }
 
@@ -110,16 +123,15 @@ window.onload = displayAllPapers;
 <center>
   <ul>
     <li><a href="#" onclick="sorter('mctest', this);">MC Test</a></li>
-    <li><a href="#" onclick="sorter('ai2', this);">Ai2</a></li>
+    <li><a href="#" onclick="sorter('ai2', this);">AI2</a></li>
     <li><a href="#" onclick="sorter('todai', this);">Todai</a></li>
-    <li><a href="#" onclick="sorter('deepmind-dailymail', this);">DeepMind DailyMail</a></li>
-    <li><a href="#" onclick="sorter('babi', this);">Facebook babi AI</a></li>
+    <li><a href="#" onclick="sorter('dailymail', this);">DeepMind DailyMail</a></li>
+    <li><a href="#" onclick="sorter('babi', this);">Facebook babi</a></li>
   </ul>
 </center>
 </div>
 <hr>
 </br>	
 <div id="pubs"></div>
-
 
 </body>
