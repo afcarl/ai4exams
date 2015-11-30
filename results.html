@@ -2,10 +2,21 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="eqa.css">
 	<script type="text/javascript">
-	  function checkForFocus() {
-	    document.getElementById("testurl").innerHTML=window.location.href     
-	  }
-	  window.onload = checkForFocus;
+	
+	function checkForFocus() {
+		var urlparts = window.location.href.split("#");
+		if (urlparts.length > 1) {
+		  var target = urlparts[1];	
+		  addFocus(document.getElementById(target));
+		}
+	}
+	
+    function addFocus(o){
+        o.style.fontWeight=900;
+        o.style.backgroundColor="ffff99";
+    }
+
+	window.onload = checkForFocus;
 	</script>
 </head>
 
@@ -16,10 +27,10 @@
 		<hr>
 		<ul>
 			<li>
-
 				<div id="resultheader"><a href="#mctest">MC Test</a></div>  
 				<div id="result" align="center">
 					<table id="result">
+						<col width=240>
 						<thead>
 							<tr>
 								<th colspan="1"></th>	
@@ -37,7 +48,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
+							<tr id="wang2015">
 								<td><a href="_papers/P15-2115.pdf">Wang (2015)</a></td>
 								<td>84.22</td>
 								<td>67.85</td>
@@ -46,7 +57,7 @@
 								<td>67.94</td>
 								<td>69.94</td>
 							</tr>
-							<tr>
+							<tr id="sachan2015">
 								<td><a href="_papers/P15-1024.pdf">Sachan (2015)</a></td>
 								<td>--</td>
 								<td>--</td>
@@ -55,7 +66,7 @@
 								<td>67.99</td>
 								<td>67.83</td>
 							</tr>
-							<tr>
+							<tr id="smith2015">
 								<td><a href="_papers/D15-1197.pdf">Smith (2015)</a></td>
 								<td>78.79</td>
 								<td>70.31</td>
@@ -64,7 +75,7 @@
 								<td>63.34</td>
 								<td>65.96</td>
 							</tr>					
-							<tr>
+							<tr id="narasimhan2015">
 								<td><a href="_papers/P15-1121.pdf">Narasimhan (2015)</a></td>
 								<td>82.36</td>
 								<td>65.23</td>
@@ -73,7 +84,7 @@
 								<td>59.90</td>
 								<td>63.75</td>
 							</tr>							
-							<tr>
+							<tr id="richardson2013">
 								<td><a href="_papers/D13-1020.pdf">Richardson (2013)</a></td>
 								<td>76.78</td>
 								<td>62.50</td>
@@ -85,29 +96,101 @@
 						</tbody>
 					</table>
 					<br>
-					<hr>
-				</li>
-				<li>
-					<div id="resultheader"><a href="#ai2">Ai2 Science Exams</a></div>  	
-					No peer-reviewed systematic results yet.		
-					<hr>		
-				</li>
-				<li>
-					<div id="resultheader"><a href="#todai">Todai</a></div>  
-					No peer-reviewed systematic results yet.		
-					<hr>	
-				</li>	
-				<li>
-					<div id="resultheader"><a href="#dailymail">Daily Mail</a></div>  		
-					<hr>	
-				</li>
-				<li>
-					<div id="resultheader"><a href="#babi">bAbI</a></div>  		
-					No peer-reviewed systematic results yet.		
-					<hr>	
-				</li>								
-			</ul>	
-		</div>
+				</div>
+				<hr>
+			</li>
+			<li>
+				<div id="resultheader"><a href="#ai2">Ai2 Science Exams</a></div>  	
+				No peer-reviewed systematic results yet.		
+				<hr>		
+			</li>
+			<li>
+				<div id="resultheader"><a href="#todai">Todai</a></div>  
+				<div id="result" align="center">
+					<table id="result">
+						<col width=240>
+						<thead>
+							<tr>
+								<th colspan="1">System</th>	
+								<th colspan="1">English</th>	
+								<th colspan="1">Japanese</th>	
+								<th colspan="1">Japanese History</th>	
+								<th colspan="1">Math IA</th>
+								<th colspan="1">Math IIB</th>	
+								<th colspan="1">Physics</th>
+								<th colspan="1">World History</th>	
+							</tr>
+							<tr>
+								<th colspan="1"></th>	
+								<th colspan="1">/200</th>	
+								<th colspan="1">/150</th>	
+								<th colspan="1">/100</th>	
+								<th colspan="1">/100</th>
+								<th colspan="1">/100</th>	
+								<th colspan="1">/100</th>
+								<th colspan="1">/100</th>	
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="fujita2013">
+								<td>Fujita (2013) Task-takers</td>
+								<td>52</td>
+								<td>62</td>
+								<td>56</td>
+								<td>57</td>
+								<td>41</td>
+								<td>39</td>
+								<td>58</td>
+							</tr>	
+							<tr>
+								<td>Student Average</td>
+								<td>88.3</td>
+								<td>72.2</td>
+								<td>45.6</td>
+								<td>52.0</td>
+								<td>47.6</td>
+								<td>42.0</td>
+								<td>46.6</td>
+							</tr>	
+						</tbody>
+					</table>
+				</div>
+				<hr>
+			</li>	
+			<li>
+				<div id="resultheader"><a href="#dailymail">Daily Mail</a></div>  	
+				<div id="result" align="center">
+					<table id="result">
+						<col width=240>
+						<thead>
+							<tr>
+								<th colspan="1">System</th>	
+								<th colspan="1">Validation</th>	
+								<th colspan="1">Test</th>	
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="hermann2015">
+								<td>Hermann (2015) Attentive</td>
+								<td>70.5</td>
+								<td>69.0</td>
+							</tr>	
+							<tr>
+								<td>Hermann (2015) Impatient</td>
+								<td>69.0</td>
+								<td>68.0</td>
+							</tr>	
+						</tbody>
+					</table>
+				</div>
+				<hr>	
+			</li>
+			<li>
+				<div id="resultheader"><a href="#babi">bAbI</a></div>  		
+				No peer-reviewed systematic results yet.		
+				<hr>	
+			</li>								
+		</ul>	
 	</div>
-	<div id="testurl"></div>	
+</div>
 </body>
