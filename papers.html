@@ -68,7 +68,7 @@ var entries = [
     code:"richardson2013"
 	}];
 
-function displayAllPapers() {
+function displayAllPapers() {	
   document.getElementById("pubs").innerHTML="";
   document.getElementById("pubs").innerHTML += "<ul>\n";
   for (var i = 0; i < entries.length; i++) {
@@ -77,7 +77,10 @@ function displayAllPapers() {
   document.getElementById("pubs").innerHTML += "</ul>\n";
 }
 
+var last;
+var lastColor;
 function sorter(data, obj) {
+  clearNavColors();	
   document.getElementById("pubs").innerHTML="";
   document.getElementById("pubs").innerHTML += "<ul>\n";
   for (var i = 0; i < entries.length; i++) {
@@ -86,6 +89,7 @@ function sorter(data, obj) {
     }
   }	
   document.getElementById("pubs").innerHTML += "</ul>\n";
+  obj.style.color="black";
 }
 
 function format(entry) {
@@ -118,6 +122,19 @@ function contains(a, obj) {
   return false;
 }
 
+function clearNavColors() {
+  	var listItems = document.getElementById("navul").getElementsByTagName("li");
+	for (var i = 0; i < listItems.length; i++) {
+	    listItems[i].childNodes[0].style.color="#ccc";		
+	}
+}
+
+function displayAllHelper(obj) {
+  clearNavColors();	
+  obj.style.color="black";	
+  displayAllPapers();
+}
+
 window.onload = displayAllPapers;
 </script>
 </head>
@@ -129,7 +146,8 @@ window.onload = displayAllPapers;
 <div id="header">Reading List</div>   
 <div id="nav">
 <center>
-  <ul>
+  <ul id="navul">
+    <li><a href="#" onclick="displayAllHelper(this);" style="color:black;">All</a></li>
     <li><a href="#" onclick="sorter('mctest', this);">MC Test</a></li>
     <li><a href="#" onclick="sorter('ai2', this);">AI2</a></li>
     <li><a href="#" onclick="sorter('todai', this);">Todai</a></li>
