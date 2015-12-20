@@ -72,6 +72,9 @@ function displayAllPapers() {
   document.getElementById("pubs").innerHTML="";
   document.getElementById("pubs").innerHTML += "<ul>\n";
   for (var i = 0; i < entries.length; i++) {
+    if (i == 0 || entries[i-1].year != entries[i].year) {
+      document.getElementById("pubs").innerHTML += entries[i].year + "<hr>";      
+    }
     document.getElementById("pubs").innerHTML += "<li>" + format(entries[i]) + "</li>\n";
   }	
   document.getElementById("pubs").innerHTML += "</ul>\n";
@@ -143,7 +146,21 @@ window.onload = displayAllPapers;
 
 <body>
 <title style="text-align:left">Reading List</title >
+<div id="bar"></div>   
 <div id="header">Reading List</div>   
+
+<div id="nav_left">
+ <ul class="rex-navi1 rex-navi-depth-1 rex-navi-has-6-elements">
+ <li class="normal"><a class="" href="index.php?article_id=46">Welcome</a></li>
+ <li class="normal"><a class="" href="workshop.html">Workshop </a></li>
+ <li class="active"><a class="" class="" href="index.php?article_id=33">Reading List </a></li>
+ <li class="normal"><a class="" href="index.php?article_id=47">Data Sets</a></li>
+ <li class="normal"><a class="" href="index.php?article_id=38">Tools and Evaluation</a></li>
+ <li class="normal"><a class="" href="index.php?article_id=26">Contact</a></li>
+ </ul>
+</div>       
+
+<div id="contente">
 <div id="nav">
 <center>
   <ul id="navul">
@@ -159,5 +176,5 @@ window.onload = displayAllPapers;
 <hr>
 </br>	
 <div id="pubs"></div>
-
+</div>
 </body>
