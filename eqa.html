@@ -1,122 +1,35 @@
-
+<html>
 <head>
-<link rel="stylesheet" type="text/css" href="eqa.css">
-<script type="text/javascript">
-var entries = [
-  {author:"Jason Weston, Antoine Bordes, Sumit Chopra, Alexander M. Rush, Bart van Merriënboer &amp; Tomas Mikolov",
-    title:"Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks",
-    year:"2016",
-    data:["babi"],
-    link:"_papers/1502.05698.pdf",
-    bib:"IN_SUB"
-  },
-  {author:"Karl Moritz Hermann, Tom&#xe1;&#x0161; Ko&#x010d;isk&#xfd;&#x201a; Edward Grefenstette, Lasse Espeholt, Will Kay, Mustafa Suleyman, and Phil Blunsom",
-    title:"Teaching Machines to Read and Comprehend",
-    year:"2015",
-    data:["deepmind-dailymail"], 
-    link:"_papers/1506.03340.pdf",
-    bib:"_bib/1506.03340.bib"
-  },
-  {author:"Ellery Smith, Nicola Greco, Matko Bosnjak, and  Andreas Vlachos",
-    title:"A Strong Lexical Matching Method for the Machine Comprehension Test",
-    year:"2015",
-    data:["mctest"], 
-    link:"_papers/D15-1197.pdf",
-    bib:"_bib/D15-1197.bib"
-  },
-  {author:"Hai Wang, Mohit Bansal, Kevin Gimpel, and David McAllester", 
-    title:"Machine Comprehension with Syntax, Frames, and Semantics", 
-    year:"2015", 
-    data:["mctest"], 
-    link:"_papers/P15-2115.pdf", 
-    bib:"_bib/P15-2115.bib"
-  },
-  {author:"Karthik Narasimhan and Regina Barzilay", 
-    title:"Machine Comprehension with Discourse Relations", 
-    year:"2015", 
-    data:["mctest"], 
-    link:"_papers/P15-1121.pdf", 
-    bib:"_bib/P15-1121.bib"
-  },
-  {author:"Akira Fujita, Akihiro Kameda, Ai Kawazoe, and Yusuke Miyao", 
-    title:"Overview of Todai Robot Project and Evaluation Framework of its NLP-based Problem Solving", 
-    year:"2014", 
-    data:["todai"], 
-    link:"_papers/todai_overview.pdf", 
-    bib:"_bib/todai_overview.bib"
-  },
-  {author:"Matthew Richardson, Christopher J.C. Burges, and  Erin Renshaw",
-    title:"MCTest: A Challenge Dataset for the Open-Domain Machine Comprehension of Text",
-    year:"2013",
-    data:["mctest"],
-    link:"_papers/D13-1020.pdf",
-    bib:"_bib/D13-1020.bib"
-	}];
-
-function displayAllPapers() {
-  document.getElementById("pubs").innerHTML="";
-  document.getElementById("pubs").innerHTML += "<ul>\n";
-  for (var i = 0; i < entries.length; i++) {
-    document.getElementById("pubs").innerHTML += "<li>" + format(entries[i]) + "</li>\n";
-  }	
-  document.getElementById("pubs").innerHTML += "</ul>\n";
-}
-
-function sorter(data, obj) {
-  document.getElementById("pubs").innerHTML="";
-  document.getElementById("pubs").innerHTML += "<ul>\n";
-  for (var i = 0; i < entries.length; i++) {
-    if (contains(entries[i].data, data)) {
-      document.getElementById("pubs").innerHTML += "<li>" + format(entries[i]) + "</li>\n";
-    }
-  }	
-  document.getElementById("pubs").innerHTML += "</ul>\n";
-}
-
-function format(entry) {
-  var str = ""
-  str += entry.title.bold() + "<br>\n" 
-  str += entry.author + "<br>\n"	
-  str += "[<a href=" + entry.link + ">paper</a>] \n"
-  if (entry.bib == "IN_SUB") {
-	str += " In Submission " 
-  } 
-  else {
-    str += "[<a href=" + entry.bib + ">bib</a>]"
-  }
-  return str
-}
-
-function contains(a, obj) {
-  var i = a.length;
-  while (i--) {
-    if (a[i] === obj) {
-      return true;
-    }
-  }
-  return false;
-}
-
-window.onload = displayAllPapers;
-</script>
+  <link rel="stylesheet" type="text/css" href="eqa.css">
 </head>
+<title style="text-align:left">Exam Question Answering</title >
+<div id="bar"></div>   
+<div id="header">Exam Question Answering</div>   
 
+<div id="nav_left">
+ <ul class="rex-navi1 rex-navi-depth-1 rex-navi-has-6-elements">
+ <li class="active"><a class="" href="eqa.html">Welcome</a></li>
+ <li class="normal"><a class="" href="_workshop/ai4exams2016.html">Workshop</a></li>
+ <li class="normal"><a class="" href="papers.html">Reading List </a></li>
+ <li class="normal"><a class="" href="datasets.html">Data Sets</a></li>
+ <li class="normal"><a class="" href="tools.html">Tools and Evaluation</a></li>
+ <li class="normal"><a class="" href="contact.html">Contact</a></li>
+ </ul>
+</div>       
 
+<div id="content">
+<p>
+As artificial intelligence has matured as a field, many researchers have attempted to define what it means for a machine to be intelligent, and how to measure our progress in creating intelligent machines. 
 
-<body>
-<div id="nav">
-<center>
-  <ul>
-    <li><a href="#" onclick="sorter('mctest', this);">MC Test</a></li>
-    <li><a href="#" onclick="sorter('todai', this);">Todai</a></li>
-    <li><a href="#" onclick="sorter('deepmind-dailymail', this);">DeepMind DailyMail</a></li>
-    <li><a href="#" onclick="sorter('babi', this);">Facebook babi AI</a></li>
-  </ul>
-</center>
+In recent years, attention has also focused on the use of exams, quizzes, as word games as IBM's Watson system outperformed human competitors on Jeopardy!
+
+The Turing test is a test of a machine's ability to exhibit intelligent behavior equivalent to, or indistinguishable from, that of a human. Alan Turing proposed that a human evaluator would judge natural language conversations between a human and a machine that is designed to generate human-like responses.
+</p>
+<br>
+<p>
+We've created this website as community resource for researchers interested in machine intelligence, particularly in systems developed for or evaluated in an exam QA setting.  We define exam QA as a machine reading task in which the system is provided a set of texts (sometimes with visual aids) and a corresponding set of questions.  The system is successful if it can process the text and provide the correct answers to the questions.  These questions can be multiple choice, in which a set of answer candidates in given, or short answer, where they are not.
+</p>
 </div>
-<hr>
-</br>	
-<div id="pubs"></div>
-
 
 </body>
+</html>
