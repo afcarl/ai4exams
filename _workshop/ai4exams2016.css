@@ -338,38 +338,17 @@ a.homebutton:active {color: #22bbff; }
 }
 
 
-
-.center1
-
-{ 
-
+#center {
+  width: 600px;
   margin-left: auto;
-
   margin-right: auto;
-
-  text-align: left;
-
-  PADDING-TOP: 0px;
-
-  PADDING-BOTTOM: 0px;
-
-  PADDING-LEFT:0px;
-
-  PADDING-RIGHT:0px;
-
 }
 
- 
-
-.center2
-
-{ 
-
-  text-align: center;
-
+#center-body {
+  background-color: #ececf1;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-
-
 
 
 img.centered {
@@ -377,4 +356,3 @@ img.centered {
     margin-left: auto;
     margin-right: auto;
 }
-

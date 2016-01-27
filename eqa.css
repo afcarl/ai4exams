@@ -287,3 +287,6 @@ wang {
     font-family: "Avenir Next";
 }
 
+#workshop-content {
+  width: 1000px;
+}
