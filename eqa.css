@@ -290,3 +290,10 @@ wang {
 #workshop-content {
   width: 1000px;
 }
+
+h3 {
+  text-indent: 0px;
+  font-family: Verdana;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
