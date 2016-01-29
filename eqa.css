@@ -55,8 +55,7 @@ nav {
     float: left;
     padding-right: 3%;
     padding-left: 1.5em;
-    width: 20%;
-    max-width: 8.5em;
+    width: 8.5em;
 }
 
 #nav_left ul {
@@ -97,6 +96,7 @@ nav {
 #content {
       float: left;
       width: 70%;
+      min-height: 1000px;
 }
 
 active li a {
@@ -129,7 +129,7 @@ ul {
 
 
 #header {
-    padding-left: 24%;
+    padding-left: 5.5em;
     color: #000;
     font: 40px "Avenir Next";
     margin: 0 5px 20px 20px;
@@ -206,7 +206,7 @@ table#result a {
     color:#000;
 	font: 30px/1 Helvetica, Verdana, sans-serif;
     margin: 0 0 10px 20px;
-    padding-top: 10px;
+    padding-top: 30px;
 }
 
 a.button {
@@ -272,6 +272,7 @@ wang {
   width: 70%;
   float: left;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 #eqa {
