@@ -122,51 +122,51 @@ var entries = [
     link:"_papers/D13-1020.pdf",
     bib:"_bib/D13-1020.bib",
     code:"richardson2013"
-	}];
+  }];
 
-function displayAllPapers() {	
+function displayAllPapers() { 
   document.getElementById("pubs").innerHTML="";
   document.getElementById("pubs").innerHTML += "<ul>\n";
   for (var i = 0; i < entries.length; i++) {
     if (i == 0 || entries[i-1].year != entries[i].year) {
-      document.getElementById("pubs").innerHTML += entries[i].year + "<hr>";      
+      document.getElementById("pubs").innerHTML += entries[i].year + "<hr width=100%>";      
     }
     document.getElementById("pubs").innerHTML += "<li>" + format(entries[i]) + "</li>\n";
-  }	
+  } 
   document.getElementById("pubs").innerHTML += "</ul>\n";
 }
 
 var last;
 var lastColor;
 function sorter(data, obj) {
-  clearNavColors();	
+  clearNavColors(); 
   document.getElementById("pubs").innerHTML="";
   document.getElementById("pubs").innerHTML += "<ul>\n";
   for (var i = 0; i < entries.length; i++) {
     if (contains(entries[i].data, data)) {
       document.getElementById("pubs").innerHTML += "<li>" + format(entries[i]) + "</li>\n";
     }
-  }	
+  } 
   document.getElementById("pubs").innerHTML += "</ul>\n";
   obj.style.color="black";
 }
 
 function format(entry) {
   var str = ""
-  str += entry.title.bold() + "<br>\n" 
-  str += entry.author + "<br>\n"	
+  str += "<span id=\"paper-title\">" + entry.title + "</span><br>\n" 
+  str += entry.author + "<br>\n"  
   str += "[<a href=" + entry.link + ">paper</a>] \n"
   if (entry.bib == "IN_SUB") {
-	str += " In Submission " 
+  str += " In Submission " 
   } 
   else {
     str += "[<a href=" + entry.bib + ">bib</a>]"
   }
   if (entry.data.length > 0) {
-	for (var i = 0; i < entry.data.length; i++) {
-	  var dname = entry.data[i];
+  for (var i = 0; i < entry.data.length; i++) {
+    var dname = entry.data[i];
       str += "[<a href='results.html#" + entry.code + "' class='" + dname + "button'>" + dname + "</a>]" 
-    }	
+    } 
   }
   return str
 }
@@ -182,15 +182,15 @@ function contains(a, obj) {
 }
 
 function clearNavColors() {
-  	var listItems = document.getElementById("navul").getElementsByTagName("li");
-	for (var i = 0; i < listItems.length; i++) {
-	    listItems[i].childNodes[0].style.color="#ccc";		
-	}
+    var listItems = document.getElementById("center-nav").getElementsByTagName("li");
+  for (var i = 0; i < listItems.length; i++) {
+    //  listItems[i].childNodes[0].style.color="#ccc";    
+  }
 }
 
 function displayAllHelper(obj) {
-  clearNavColors();	
-  obj.style.color="black";	
+  clearNavColors(); 
+  obj.style.color="black";  
   displayAllPapers();
 }
 
@@ -198,29 +198,28 @@ window.onload = displayAllPapers;
 </script>
 </head>
 
-
-
-<body>
-<title style="text-align:left">Reading List</title >
-<div id="bar"></div>   
-<div id="header">Reading List</div>   
-
-<div id="nav_left">
- <ul class="rex-navi1 rex-navi-depth-1 rex-navi-has-6-elements">
- <li class="normal"><a class="" href="eqa.html">Welcome</a></li>
- <li class="normal"><a class="" href="workshop.html">Workshop</a></li>
- <li class="active"><a class="" href="papers.html">Reading List </a></li>
- <li class="normal"><a class="" href="datasets.html">Data Sets</a></li>
- <li class="normal"><a class="" href="tools.html">Tools</a></li>
- <li class="normal"><a class="" href="results.html">Results</a></li>
- <li class="normal"><a class="" href="contact.html">Contact</a></li>
- </ul>
-</div>           
-
 <div id="content">
-<div id="nav">
+
+<div id="center-nav">
+<ul>
+  <li><a href="workshop.html">WORKSHOP</a></li>
+  <li class="active">PAPERS</li>
+  <li><a href="data.html">DATA</a></li>
+  <li><a href="eqa.html">MAIN</a></li>
+  <li><a href="tools.html">TOOLS</a></li>
+  <li><a href="results.html">RESULTS</a></li>
+  <li><a href="contact.html">CONTACT</a></li>
+  </ul>
+  <hr width="70%">
+</div>
+
+<br>
+<span style="font-weight: 200">FILTER BY DATASET</span>
+<br>
+
+<div id="center-nav">
 <center>
-  <ul id="navul">
+  <ul>
     <li><a href="#" onclick="displayAllHelper(this);" style="color:black;">All</a></li>
     <li><a href="#" onclick="sorter('mctest', this);">MC Test</a></li>
     <li><a href="#" onclick="sorter('ai2', this);">AI2</a></li>
@@ -231,7 +230,5 @@ window.onload = displayAllPapers;
 </center>
 </div>
 <br>
-<hr>
 <div id="pubs"></div>
 </div>
-</body>
