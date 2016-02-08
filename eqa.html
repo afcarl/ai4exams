@@ -31,22 +31,22 @@
 <h3> <span id="h3-big">W</span>hat is exam question answering? </h3>
 <div id="text-passage">
 
- Exam question answering (EQA) is a variant of question answering, an emerging task in NLP, spurred on from an increasing amount of recent work in end-to-end learning.  We define EQA as:
+ Exam question answering (EQA) is a variant of question answering, an emerging task in NLP, spurred on from an increasing interest in end-to-end learning.  We define EQA as:
 <center>
 <div id="quote">
-<i>A machine reading task in which the system is provided a set of texts (sometimes with visual aids) and a corresponding set of questions.  The system is successful if it can process the text and provide the correct answers to the questions. </i> 
+<i>A machine reading task in which the system is provided a set of texts (sometimes with visual aids) and a corresponding set of questions.  The system is successful if through processing the text it can provide the correct answers to the questions. </i> 
 </div> 
 </center>
  These questions can be multiple choice, in which case a set of answer candidates is given, or short answer, in which case they are not.  
 
 <p>
- Most question answering tasks can be phrased as EQA, and as such most modeling improvements to QA systems are also be relevant to EQA.  However, what sets EQA apart is the use of standard, human-curated exams and resources.  Because these exams are also administered to humans, their use provides not only a point of comparison between other machine reading systems, but also a benchmark of machine reading vs. human intelligence.
+ Most question answering tasks can be phrased as EQA, and as such most modeling improvements to QA systems are also applicable to EQA.  However, what sets EQA apart is the use of standard, human-curated exams and resources.  Because these exams are also administered to humans, their use provides not only a point of comparison between other machine reading systems, but also a benchmark of machine reading vs. human intelligence.
 </p>
 
 <!-- Recent work <sup>1, 2</sup> -->
 
  <p>
- This website serves as a community resource for researchers interested in machine intelligence, particularly in systems developed for, or evaluated in, an exam question answering (EQA) setting.  Here you will find a curated list of relevant papers, data sets, and comparative result tables.  In addition, we provide tools for unifying data and evaluation across different QA models.
+ This website serves as a community resource for researchers interested in machine intelligence, particularly in systems developed for, or evaluated in, an EQA setting.  Here you will find a curated list of relevant papers, data sets, and comparative result tables.  In addition, we provide tools for unifying data and evaluation across different QA models to aid researchers in this area.
  </p>
 </div>
 
@@ -55,11 +55,14 @@
 <h3> <span id="h3-big">M</span>otivation</h3>
 <div id="text-passage">
 <p>
-As artificial intelligence has matured as a field, researchers have long sought to define what it means for a machine to be intelligent and to devise a test with which to measure our progress towards creating intelligent machines.  While the Turing test has emerged as the most notable and widely-cited of these measures, it is a poor fit for the research environment where a quick and objective measure of a machine's reading and reasoning capabilities is needed.
+As artificial intelligence has matured as a field, researchers have long sought to define what it means for a machine to be intelligent, and in doing so devise a test with which to measure our progress towards creating intelligent machines.  While the Turing test has emerged as the most notable and widely-cited of these measures, it is a poor fit for the research environment where a quick and objective measure of a machine's reading and reasoning capabilities is needed.
 <!--quickly and comparatively evaluating how well a machine can read and reason. -->
 </p>
 <p>
-In recent years, more attention has been placed on the use of exams, quizzes, and word games as a measure of these skills.  For the same reasons that we subject ourselves to standardized testing -- to probe what knowledge we've memorized and what new facts we can infer -- we feel that EQA is an excellent benchmark to assess machine intelligence in NLP.  While simple tactics can produce high-scoring baselines <sup>[<a href="results.html#richardson2013">1</a>]</sup>, it stands to reason that matching expert human performance on exams will require machines to comprehend the same facts, and to make similar inferences.
+Simultaneously, after decades of steady progress, the performance of state-of-the-art systems on many traditional NLP tasks has leveled off.  Together with the development of more powerful models, attention has also shifted away from "pre-processing" tasks which have little inherent value (part-of-speech tagging, parsing), and towards end tasks which more strongly correlate with a potential user's goals.  What will be the defining NLP tasks of tomorrow?  It is likely that question answering will be among them, but QA still requires more formalization &mdash; more consistent choices of data sets and evaluation measures &mdash; to ensure that QA research will be just as scientifically rigorous as the NLP tasks of the past.
+</p>
+<p>
+In recent years some attention has been placed on the use of exams, quizzes, and word games as a measure of these skills.  For the same reasons that we subject ourselves to standardized testing &mdash; to probe what knowledge we've memorized and what new facts we can infer &mdash; we feel that EQA is an excellent benchmark to assess machine intelligence in NLP.  While simple tactics can produce high-scoring baselines <sup>[<a href="results.html#richardson2013">1</a>]</sup>, it stands to reason that matching expert human performance on exams will require machines to comprehend the same facts, and to make similar inferences.
 </p>
 <!-- Just as Kasparov's defeat at the hands of IBM's Deep Blue,  and systems such as IBM's Watson system outperformed human competitors on Jeopardy!  -->
 </p>
