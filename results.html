@@ -95,13 +95,6 @@
         <hr width=60%>
       </li>
       <li>
-        <div id="resultheader"><a href="#ai2">Ai2 Science Exams (Aristo)</a></div>    
-                <div id="result" align="center">
-            No systematic, peer-reviewed results on this data set yet.  
-            </div>
-        <hr width=60%>
-      </li>
-      <li>
         <div id="resultheader"><a href="#todai">Todai Exam</a></div>  
         <div id="result" align="center">
           <table id="result">
@@ -216,12 +209,60 @@
         <hr width=60%>
       </li>
       <li>
-        <div id="resultheader"><a href="#babi">Facebook bAbI</a></div> 
+        <div id="resultheader"><a href="#babi">Facebook Children's Book Test</a></div> 
+                <div id="result" align="center">
+          <table id="result">
+            <col width=240>
+            <thead>
+              <tr>
+                <th colspan="1">System</th> 
+                <th colspan="1">Named Entities</th> 
+                <th colspan="1">Common Nouns</th> 
+                <th colspan="1">Verbs</th> 
+                <th colspan="1">Prepositions</th> 
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="hermann2015">
+                <td>Hill (2016) MemNNs Best</td>
+                <td>66.6</td>
+                <td>63.0</td>
+                <td>69.0</td>
+                <td>70.3</td>
+              </tr> 
+              <tr>
+                <td>Hill (2016) Contextual LSTM</td>
+                <td>43.6</td>
+                <td>58.2</td>
+                <td>80.5</td>
+                <td>80.6</td>
+              </tr> 
+              <tr>
+                <td>Hill (2016) Embedding (window + position)</td>
+                <td>40.2</td>
+                <td>50.6</td>
+                <td>73.6</td>
+                <td>67.0</td>
+              </tr> 
+              <tr>
+                <td>Hill (2016) Kneser-Ney + Cache</td>
+                <td>43.9</td>
+                <td>57.7</td>
+                <td>77.2</td>
+                <td>67.9</td>
+              </tr> 
+            </tbody>
+          </table>
+        </div>
+        <hr width=60%>
+      </li>               
+      <li>
+        <div id="resultheader"><a href="#ai2">Ai2 Science Exams (Aristo)</a></div>    
                 <div id="result" align="center">
             No systematic, peer-reviewed results on this data set yet.  
             </div>
         <hr width=60%>
-      </li>               
+      </li>
     </ul> 
   </div>
 </div>
