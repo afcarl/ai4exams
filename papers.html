@@ -4,6 +4,14 @@
 <script type="text/javascript">
 var entries = [
   {
+    author:"Pranav Rajpurkar, Jian Zhang, Konstantin Lopyrev, and Percy Liang",
+    title:"SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+    year:"2016",
+    data:["squad"],
+    link:"_papers/1606.05250v1.pdf",
+    bib:"IN_SUB",
+    code:"squad2016"
+  },  {
     author:"Alessandro Sordonif, Phillip Bachmanf, and Yoshua Bengio",
     title:"Iterative Alternating Neural Attention for Machine Reading",
     year:"2016",
@@ -271,11 +279,12 @@ window.onload = displayAllPapers;
 <center>
   <ul>
     <li><a href="#" onclick="displayAllHelper(this);" style="color:black;">All</a></li>
-    <li><a href="#" onclick="sorter('mctest', this);">MC Test</a></li>
     <li><a href="#" onclick="sorter('ai2', this);">AI2</a></li>
-    <li><a href="#" onclick="sorter('todai', this);">Todai</a></li>
-    <li><a href="#" onclick="sorter('dailymail', this);">DM DailyMail</a></li>
+    <li><a href="#" onclick="sorter('mctest', this);">MC Test</a></li>
+    <li><a href="#" onclick="sorter('dailymail', this);">DeepMind</a></li>
     <li><a href="#" onclick="sorter('babi', this);">FB babi</a></li>
+    <li><a href="#" onclick="sorter('squad', this);">SQuAD</a></li>
+    <li><a href="#" onclick="sorter('todai', this);">Todai</a></li>
   </ul>
 </center>
 </div>
