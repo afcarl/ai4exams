@@ -18,7 +18,7 @@
 </div>       
 
 
-
+<div id="resultheader"><a href="#dataglance">At a Glance</a></div>   
 <br>
   <div id="datatable">
   <table id="t01">
@@ -38,7 +38,7 @@
         <td><a href="http://creativecommons.org/licenses/by-sa/4.0/legalcode">Creative Commons ShareAlike</a></td>
       </tr>
       <tr>
-        <td><a href="https://github.com/deepmind/rc-data">DeepMind Daily Mail</a></td>
+        <td><a href="#deepmind">DeepMind Daily Mail</a></td>
         <td>Collection of news articles and corresponding cloze queries</td>
         <td>
         196,961 documents
@@ -48,7 +48,7 @@
         <td><a href="https://github.com/deepmind/rc-data/blob/master/LICENSE">Apache</a></td>
       </tr>
       <tr>
-        <td><a href="https://github.com/deepmind/rc-data">DeepMind CNN</a></td>
+        <td><a href="#deepmind">DeepMind CNN</a></td>
         <td>Collection of news articles and corresponding cloze queries</td>
         <td>
         90,266 documents 
@@ -65,19 +65,19 @@
         <td><a href="https://github.com/facebook/bAbI-tasks/blob/master/LICENSE.md">BSD</a></td>
       </tr>  
       <tr>
-        <td><a href="https://research.facebook.com/researchers/1543934539189348">Facebook bAbI Chidlren's Book Test</a></td>
+        <td><a href="#cbt">Facebook bAbI Chidlren's Book Test</a></td>
         <td>Text passages and corresponding questions drawn from Project Gutenberg Children's books</td>
         <td>669,343 training questions<br>8,000 dev questions<br>10,000 test questions</td>
         <td><a href="https://github.com/facebook/bAbI-tasks/blob/master/LICENSE.md">BSD</a></td>
       </tr>       
       <tr>
-        <td><a href="http://research.microsoft.com/en-us/um/redmond/projects/mctest/">MCTest</a></td>
+        <td><a href="#mctest">MCTest</a></td>
         <td>Machine comprehension of short stories</td>
-        <td>660 stories, 4 questions per story</td>
+        <td>660 stories, <br>4 questions per story</td>
         <td><a href="https://research.microsoft.com/en-us/UM/legal/MSR_Master_TOU_October2013.htm">Proprietary</a></td>
       </tr>
       <tr>
-        <td><a href="https://stanford-qa.com/">SQuAD: Stanford Question Answering Dataset</a></td>
+        <td><a href="#squad">SQuAD: Stanford Question Answering Dataset</a></td>
         <td>Crowdsourced question and answers with corresponding Wikipedia passages</td>
         <td>107,785 question-answer pairs on 536 articles</td>
         <td></td>
@@ -90,5 +90,161 @@
       </tr>
     </tbody>
   </table>
+  </div>
+
+  <br>
+  <hr width="60%">
+
+    <ul>
+      <li>
+        <div id="resultheader"><a name="mctest">MC Test</a></div>  
+        <div id="data-text-passage">
+          MCTest is a data set created by Microsoft Research and consists of 660 short, fictional stories, each with an associated set of multiple-choice questions.
+          Each story and corresponding question set was created via crowdsourcing.
+          The participants in each story are unique, and each story independent of the next.  
+          The data is split into MC 160, which has been manually curated to correct errors occuring in the crowdsourced data, and the larger MC 500.<p>
+          As shown below, each story is accompanied by four questions.  According to the crowdsourcing guidelines, at least two of the four questions should require multi-sentence reasoning.
+        </div>
+        <br>
+        <div id="snippet">
+        James the Turtle was always getting in trouble. Sometimes he'd reach into the freezer and empty out all the food. Other times he'd sled on the deck and get a splinter. His aunt Jane tried as hard as she could to keep him out of trouble, but he was sneaky and got into lots of trouble behind her back.<p>
+
+        One day, James thought he would go into town and see what kind of trouble he could get into. He went to the grocery store and pulled all the pudding off the shelves and ate two jars. Then he walked to the fast food restaurant and ordered 15 bags of fries. He didn't pay, and instead headed home.<p>
+
+        His aunt was waiting for him in his room. She told James that she loved him, but he would have to start acting like a well-behaved turtle.After about a month, and after getting into lots of trouble, James finally made up his mind to be a better turtle.<p>
+
+        <span id="question">1) What is the name of the trouble making turtle?</span><br>
+            A) Fries<br>
+            B) Pudding<br>
+            C) James<br>
+            D) Jane<br>
+        <br>
+        <span id="question">2) What did James pull off of the shelves in the grocery store?</span><br>
+            A) pudding<br>
+            B) fries<br>
+            C) food<br>
+            D) splinters<br>
+        <br>
+        <span id="question">3) Where did James go after he went to the grocery store?</span><br>
+            A) his deck<br>
+            B) his freezer<br>
+            C) a fast food restaurant<br>
+            D) his room<br>
+        <br>
+        <span id="question">4) What did James do after he ordered the fries?</span><br>
+            A) went to the grocery store<br>
+            B) went home without paying<br>
+            C) ate them<br>
+            D) made up his mind to be a better turtle<br>
+        </div>
+        <br>
+        <div id="data-text-points">
+
+          <b>Read More</b> about MCTest in the paper:<br> "MCTest: A Challenge Dataset for the Open-Domain Machine Comprehension of Text", available <a href="_papers/D13-1020.pdf">here</a><br>
+          <b>Download</b> MCTest from the Microsoft Research webpage <a href="http://research.microsoft.com/en-us/um/redmond/projects/mctest/">here</a><br>
+        </div>
+      </li>
+
+      <li>
+        <br>
+        <hr width="60%">
+        <br>
+        <div id="resultheader"><a name="deepmind">DeepMind News Datasets</a></div>  
+        <div id="data-text-passage">
+        In recent years many news outlets have begun to include summary points with each news article, presumably to suit the short attention spans of online readers.  Notably, these summary points are not merely extractions of text contained in the article, but summary points which can be used to automatically construct queries which may require comprehension of the news article in order to answer.<p>
+        As shown the snippet below, the query is constructed by removing an entity from the statement, and tasking the reader to fill in the most appropriate entity from the text, in a manner similar to Cloze questions.  Entities are identified in pre-processing, and are entirely masked in the text, preventing the model from leveraging entity-specific information.<p>
+        There are two datasets, one comprised of CNN news articles, the other of Daily Mail -- a UK-based tabloid.  The CNN dataset has 90,266 documents for training, and 1,093 for test.  With an average of four queries per document, this yields 380,298 queries for training and 3,198 for test.  The Daily Mail section is significantly larger, having roughly twice as much training data and ten times as much test.  
+        </div>
+        <br>
+        <div id="snippet">
+        <span id="placeholder">@entity0</span> , <span id="placeholder">@entity1</span> ( <span id="placeholder">@entity2</span> ) <span id="placeholder">@entity3</span> lure <span id="placeholder">@entity5</span> and <span id="placeholder">@entity6</span> migrants by offering discounts to get onto overcrowded ships if people bring more potential passengers , a <span id="placeholder">@entity2</span> investigation has revealed . a smuggler in the <span id="placeholder">@entity1</span> capital of <span id="placeholder">@entity0</span> laid bare the system for loading boats with poor and desperate refugees , during a conversation that a <span id="placeholder">@entity2</span> producer secretly filmed . the conversation , recorded using a mobile phone , exposes the prices and incentives used to gather as many migrants as possible onto ships . an estimated 1,600 migrants have died so far this year on the dangerous <span id="placeholder">@entity26</span> crossing , but still more wait to try to reach <span id="placeholder">@entity27</span> . <span id="placeholder">@entity2</span> 's producer was introduced to a <span id="placeholder">@entity30</span> and <span id="placeholder">@entity31</span> smuggler by an intermediary in <span id="placeholder">@entity0</span> , who mistakenly thought she was a <span id="placeholder">@entity34</span> looking to bring other <span id="placeholder">@entity34</span> refugees with her onto boats to <span id="placeholder">@entity37</span> . why i fled : migrants share their stories the smuggler took her to an unfinished building on the outskirts of <span id="placeholder">@entity0</span> near the city 's many ports , where the migrants they have already found are kept until the crossing is ready . the building could only be reached by walking down a trash - littered alleyway , and featured a series of packed rooms , separated by curtains , where dozens sat -- well over the 80 migrants she was promised would be in her boat . the smuggler explained that the " final price " for <span id="placeholder">@entity34</span> -- often thought to be richer than their african migrant counterparts -- was $ 1,000 . he added that for each <span id="placeholder">@entity34</span> she brought with her , the producer would get a $ 100 discount . so if she brought 10 , she could travel free . he explained how the " discount " was " well known , " suggesting perhaps it was part of the unwritten rules that govern the trade and why so many migrants come to each boat . any fears about the crossing were supposed to be allayed by the smuggler insisting the boats they used had new motors , and that the <span id="placeholder">@entity30</span> pilot would have a satellite telephone and gps to assist the crossing . he also assured <span id="placeholder">@entity2</span> 's producer , when asked , that if the people became too many , they would use two boats . pregnant women among migrants trying to cross<p>
+
+<span id="placeholder">@placeholder</span> <span id="question">investigation uncovers the business inside a human smuggling ring</span>
+        </div>
+        <br>
+        <div id="data-text-points">
+          <b>Read More</b> about the DeepMind news datasets in the paper:<br> "Teaching Machines to Read and Comprehend", available <a href="_papers/1506.03340.pdf">here</a><br>
+          <b>Download the DeepMind data</b>, conveniently recreated by Kyunghyun Cho <a href="http://cs.nyu.edu/~kcho/DMQA/">here</a><br>
+          Or <b>build it yourself</b> <a href="https://github.com/deepmind/rc-data">here</a>
+        </div>
+      </li>
+
+
+
+
+
+      <li>
+        <br>
+        <hr width="60%">
+        <br>
+        <div id="resultheader"><a name="cbt">Facebook Children's Book Test (CBT)</a></div>  
+        <div id="data-text-passage">
+          Just as DeepMind used Cloze style transformations to turn summary points into queries, researchers at FAIR applied this technique to construct queries from the sentences which follow a block of text.  In the Children's Book Test, a collection of children's books were gathered from the Project Gutenberg archives.  Each question is constructed by taking 20 consecutive sentences from the book text, and leaving the 21st as the query statement.  A word from the query is selected and masked, and the reader is tasked with selecting which word from the text (of the chosen type) should be used to fill this placeholder in the query.<p>
+
+          CBT differs from the DeepMind CNN and DailyMail datasets, as it is not merely entities that are tested.  Named entities, common nouns, verbs, and prepositions are the four categories of words which may be treated as placeholders, and for each the complete set of candidates words is identified in the text using off-the-shelf NLP tools (Stanford Core NLP).  It also differs in that entities in the text are not masked, and the model is encouraged to build up a persistent representation of the participants in the story as it reads through the book text.
+        </div>
+        <br>
+        <div id="snippet">
+` What is it ? ' <br>
+answered he . <br>
+` The ogre is coming after us . <br>
+I saw him . ' <br>
+` But where is he ? <br>
+I do n't see him . ' <br>
+` Over there . <br>
+He only looks about as tall as a needle . ' <br>
+Then they both began to run as fast as they could , while the ogre and his dog kept drawing always nearer . <br>
+A few more steps , and he would have been by their side , when Dschemila threw the darning needle behind her . <br>
+In a moment it became an iron mountain between them and their enemy . <br>
+` We will break it down , my dog and I , ' cried the ogre in a rage , and they dashed at the mountain till they had forced a path through , and came ever nearer and nearer . <br>
+` Cousin ! ' <br>
+said Dschemila suddenly . <br>
+` What is it ? ' <br>
+` The ogre is coming after us with his dog . ' <br>
+` You go on in front then , ' answered he ; and they both ran on as fast as they could , while the ogre and the dog drew always nearer and nearer . <br>
+` They are close upon us ! ' <br>
+cried the maiden , glancing behind , ` you must throw the pin . ' <br>
+So Dschemil took the pin from his cloak and threw it behind him , and a dense thicket of thorns sprang up round them , which the ogre and his dog could not pass through . ' <p>
+
+<span id="question">I will get through it somehow , if I burrow underground , ' cried he , and very soon he and the <span id="placeholder">XXXXX</span> were on the other side .</span><br>
+[gold]: dog<br>
+[answer canditates]: <span id="placeholder">Cousin </span> | <span id="placeholder"> cloak | dog </span> | <span id="placeholder"> maiden </span> | <span id="placeholder"> mountain </span> | <span id="placeholder"> needle </span> | <span id="placeholder"> path </span> | <span id="placeholder"> pin </span> | <span id="placeholder"> side</span> | <span id="placeholder">steps</span><br>
+
+        </div>
+        <br>
+        <div id="data-text-points">
+                    <b>Read More</b> about the Facebook Children's Book Test dataset in the paper:<br> "The Goldilocks Principle: Reading Children's Books with Explicit Memory Representations", available <a href="_papers/1511.02301v3.pdf">here</a><br>
+          <b>Download</b> the Facebook Children's Book Test dataset <a href="https://research.facebook.com/research/babi/">here</a>
+        </div>
+      </li>
+
+
+
+
+
+            <li>
+        <br>
+        <hr width="60%">
+        <br>
+        <div id="resultheader"><a name="squad">Stanford Question Answering Dataset (SQuAD)</a></div>  
+        <div id="data-text-passage">
+          The Stanford Question Answering Dataset consists of 107,785 question-answer pairs on 536 articles.  The text passages are taken from Wikipedia across a wide range of topics, and the question-answer pairs themselves are human annotated via crowdsourcing.<p>
+          SQuAD is notable in that while the answers are contained verbatim within the corresponding text passage, they need not be entities and sets of candidates answers are not provided.  This makes SQuAD the first large scale QA dataset where answers are <i>spans</i> of text, which must be identified without additional clues.
+        </div>
+        <br>
+        <div id="snippet">
+        Conventionally, a computer consists of at least one processing element, typically a <span id="placeholder">central processing unit (CPU), and some form of memory</span>. The processing element carries out arithmetic and logic operations, and a sequencing and control unit can change the order of operations in response to stored information. <span id="placeholder">Peripheral devices</span> allow information to be retrieved from an external source, and the result of operations saved and retrieved.<p>
+
+        <span id="question">In computer terms, what does CPU stand for?</span><br><br>
+        <span id="question">What are the devices called that are from an external source?</span><br><br>
+        <span id="question">What are two things that a computer always has? </span><br>
+        </div>
+        <br>
+        <div id="data-text-points">
+                            <b>Read More</b> about the Stanford Question Answering Dataset in the paper:<br> "SQuAD: 100,000+ Questions for Machine Comprehension of Text", available <a href="_papers/1606.05250v1.pdf">here</a><br>
+          <b>Download or Explore</b> the Stanford Question Answering Dataset <a href="https://stanford-qa.com/">here</a>
+        </div>
+      </li>      
+    </ul>
 </div>
 </body>
