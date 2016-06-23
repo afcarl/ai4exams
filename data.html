@@ -152,7 +152,9 @@
         <div id="resultheader"><a name="deepmind">DeepMind News Datasets</a></div>  
         <div id="data-text-passage">
         In recent years many news outlets have begun to include summary points with each news article, presumably to suit the short attention spans of online readers.  Notably, these summary points are not merely extractions of text contained in the article, but summary points which can be used to automatically construct queries which may require comprehension of the news article in order to answer.<p>
-        As shown the snippet below, the query is constructed by removing an entity from the statement, and tasking the reader to fill in the most appropriate entity from the text, in a manner similar to Cloze questions.  Entities are identified and coreferenced in pre-processing, and are entirely masked in the text, preventing the model from leveraging entity-specific information.<p>
+
+        As shown the snippet below, the query is constructed by removing an entity from the statement, and tasking the reader to fill in the most appropriate entity from the text, in a manner similar to Cloze questions.  Entities are identified and coreferenced in pre-processing, and are entirely masked in the text.  This is intended to prevent the model from using external knowledge about the entities when choosing an answer, and instead rely on its understanding of the contexts in which the entities appear.  <p>
+
         There are two datasets, one comprised of CNN news articles, the other of Daily Mail -- a UK-based tabloid.  The CNN dataset has 90,266 documents for training, and 1,093 for test.  With an average of four queries per document, this yields 380,298 queries for training and 3,198 for test.  The Daily Mail section is significantly larger, having roughly twice as much training data and ten times as much test.  
         </div>
         <br>
