@@ -3,15 +3,7 @@
 <link rel="stylesheet" type="text/css" href="eqa.css">
 <script type="text/javascript">
 var entries = [
-  {
-    author:"Danqi Chen, Jason Bolton, and Christopher D. Manning",
-    title:"A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task",
-    year:"2016",
-    data:["dailymail"],
-    link:"_papers/1606.02858v1.pdf",
-    bib:"_bib/1606.02858v1.bib",
-    code:"chen2016"
-  },  {
+{
     author:"Pranav Rajpurkar, Jian Zhang, Konstantin Lopyrev, and Percy Liang",
     title:"SQuAD: 100,000+ Questions for Machine Comprehension of Text",
     year:"2016",
@@ -19,29 +11,31 @@ var entries = [
     link:"_papers/1606.05250v1.pdf",
     bib:"IN_SUB",
     code:"squad2016"
-  },  {
-    author:"Sosuke Kobayashi, Ran Tian, Naoaki Okazaki, and Kentaro Inui",
-    title:"Dynamic Entity Representation with Max-pooling Improves Machine Reading",
-    year:"2016",
-    data:["dailymail"],
-    link:"_papers/N16-1099.pdf",
-    bib:"_bib/N16-1099.bib",
-    code:"kobayashi2016"
   }, {
     author:"Alessandro Sordoni, Phillip Bachman, and Yoshua Bengio",
     title:"Iterative Alternating Neural Attention for Machine Reading",
     year:"2016",
-    data:["dailymail"],
+    data:["fair", "dailymail"],
     link:"_papers/1606.02245v1.pdf",
     bib:"IN_SUB",
     code:"sordoni2016"
   }, {
+    author:"Danqi Chen, Jason Bolton, and Christopher D. Manning",
+    title:"A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task",
+    year:"2016",
+    data:["dailymail"],
+    link:"_papers/1606.02858v1.pdf",
+    bib:"_bib/1606.02858v1.bib",
+    venue:"ACL 2016",
+    code:"chen2016"
+  }, {
     author:"Rudolf Kadlec, Martin Schmid, Ondrej Bajgar, and Jan Kleindienst",
     title:"Text Understanding with the Attention Sum Reader Network",
     year:"2016",
-    data:["dailymail"],
+    data:["fair", "dailymail"],
     link:"_papers/1603.01547v1.pdf",
-    bib:"IN_SUB",
+    bib:"_bib/1603.01547v1.bib",
+    venue:"ACL 2016",
     code:"kadlec2016"
   }, {
     author:"Adam Trischler, Zheng Ye, Xingdi Yuan, Jing He, Phillip Bachman, and Kaheer Suleman",
@@ -51,6 +45,15 @@ var entries = [
     link:"_papers/1603.08884.pdf",
     bib:"IN_SUB",
     code:"trischler2016"
+  }, {
+    author:"Sosuke Kobayashi, Ran Tian, Naoaki Okazaki, and Kentaro Inui",
+    title:"Dynamic Entity Representation with Max-pooling Improves Machine Reading",
+    year:"2016",
+    data:["dailymail"],
+    link:"_papers/N16-1099.pdf",
+    bib:"_bib/N16-1099.bib",
+    venue:"NAACL 2016",
+    code:"kobayashi2016"
   }, {
     author:"Wenpeng Yin, Sebastian Ebert, and Hinrich Sch&uuml;tze",
     title:"Attention-based Convolutional Neural Network for Machine Comprehension",
@@ -72,17 +75,19 @@ var entries = [
   {author:"Felix Hill, Antoine Bordes, Sumit Chopra, and Jason Weston",
     title:"The Goldilocks Principle: Reading Children's Books with Explicit Memory Representations",
     year:"2016",
-    data:["babi", "dailymail"],
+    data:["fair", "dailymail"],
     link:"_papers/1511.02301v3.pdf",
-    bib:"IN_SUB",
+    bib:"_bib/1511.02301v3.bib",
+    venue:"ICLR 2016",
     code:"hill2016"
   },
   {author:"Jason Weston, Antoine Bordes, Sumit Chopra, Alexander M. Rush, Bart Van Merri&euml;nboer, and Tomas Mikolov",
     title:"Towards AI-Complete Question Answering: A Set of Prerequisite Toy Tasks",
     year:"2016",
-    data:["babi"],
+    data:["fair"],
     link:"_papers/1502.05698.pdf",
-    bib: "IN_SUB",
+    bib: "_bib/1502.05698.bib",
+    venue: "ICLR 2016",
     code:"weston2016"
   },
   {author:"Karl Moritz Hermann, Tom&#xe1;&#x0161; Ko&#x010d;isk&#xfd;&#x201a; Edward Grefenstette, Lasse Espeholt, Will Kay, Mustafa Suleyman, and Phil Blunsom",
@@ -91,6 +96,7 @@ var entries = [
     data:["dailymail"], 
     link:"_papers/1506.03340.pdf",
     bib:"_bib/1506.03340.bib",
+    venue:"NIPS 2015",
     code:"hermann2015"
   },
   {author:"Ellery Smith, Nicola Greco, Matko Bosnjak, and  Andreas Vlachos",
@@ -99,6 +105,7 @@ var entries = [
     data:["mctest"], 
     link:"_papers/D15-1197.pdf",
     bib:"_bib/D15-1197.bib",
+    venue:"EMNLP 2015",
     code:"smith2015"
   },
   {author:"Mrinmaya Sachan, Kumar Dubey, Eric Xing, and Matthew Richardson", 
@@ -107,6 +114,7 @@ var entries = [
     data:["mctest"], 
     link:"_papers/P15-1024.pdf", 
     bib:"_bib/P15-1024.bib",
+    venue:"ACL 2015",
     code:"sachan2015"
   },
   {author:"Hai Wang, Mohit Bansal, Kevin Gimpel, and David McAllester", 
@@ -115,6 +123,7 @@ var entries = [
     data:["mctest"], 
     link:"_papers/P15-2115.pdf", 
     bib:"_bib/P15-2115.bib",
+    venue:"ACL 2015",
     code:"wang2015"
   },
   {author:"Karthik Narasimhan and Regina Barzilay", 
@@ -123,6 +132,7 @@ var entries = [
     data:["mctest"], 
     link:"_papers/P15-1121.pdf", 
     bib:"_bib/P15-1121.bib",
+    venue:"ACL 2015",
     code:"narasimhan2015"
   },
   {author:"Akira Fujita, Akihiro Kameda, Ai Kawazoe, and Yusuke Miyao", 
@@ -131,8 +141,10 @@ var entries = [
     data:["todai"], 
     link:"_papers/todai_overview.pdf", 
     bib:"_bib/todai_overview.bib",
+    venue:"LREC 2014",
     code:"fujita2014"
   },
+/*
   {author:"Noriko H. Arai and Takuya Matsuzaki",
     title:"The impact of A.I. on education - Can a robot get into the University of Tokyo",
     year:"2014",
@@ -164,29 +176,35 @@ var entries = [
     link:"_papers/Tian2014.pdf",
     bib:"_bib/Tian2014.bib",
     code:"tian2014"
-  },  
+  }, 
+*/ 
   {author:"Yusuke Miyao and Ai Kawazoe",
     title:"University Entrance Examinations as a Benchmark Resource for NLP-based Problem Solving",
     year:"2013",
     data:["todai"],
     link:"_papers/I13-1192.pdf",
     bib:"_bib/I13-1192.bib",
+    venue:"IJCNLP 2013",
     code:"miyao2013"
   },  
+/*  
   {author:"Sumire Uematsu,Takuya Matsuzaki,Hiroki Hanaoka,Yusuke Miyao and Hideki Mima",
     title:"Integrating Multiple Dependency Corpora for Inducing Wide-coverage Japanese CCG Resources",
     year:"2013",
     data:["todai"],
     link:"_papers/P13-1103.pdf",
     bib:"_bib/P13-1103.bib",
+    venue:"ACL 2013",
     code:"uematsu2013"
   },  
+*/  
   {author:"Takuya Matsuzaki, Hidenao Iwane, Hirokazu Anai and Noriko Arai", 
     title:"The Complexity of Math Problems -- Linguistic, or Computational?", 
     year:"2013", 
     data:["todai"], 
     link:"_papers/I13-1009.pdf", 
     bib:"_bib/I13-1009.bib",
+    venue:"JCNLP 2013",
     code:"matsuzaki2013"
   },
   {author:"Matthew Richardson, Christopher J.C. Burges, and  Erin Renshaw",
@@ -195,6 +213,7 @@ var entries = [
     data:["mctest"],
     link:"_papers/D13-1020.pdf",
     bib:"_bib/D13-1020.bib",
+    venue:"EMNLP 2013",
     code:"richardson2013"
   }];
 
@@ -229,12 +248,15 @@ function format(entry) {
   var str = ""
   str += "<span id=\"paper-title\">" + entry.title + "</span><br>\n" 
   str += entry.author + "<br>\n"  
-  str += "[<a href=" + entry.link + ">paper</a>] \n"
-  if (entry.bib == "IN_SUB") {
-  str += " In Submission " 
-  } 
+    if ('venue' in entry) {
+    str += entry.venue + "<br>\n"
+  }
   else {
-    str += "[<a href=" + entry.bib + ">bib</a>]"
+    str += 'In Submission<br>\n'
+  }
+  str += "[<a href=" + entry.link + ">paper</a>] \n"
+  if (entry.bib != "IN_SUB"){
+    str += "[<a href=" + entry.bib + ">bib</a>]"    
   }
   if (entry.data.length > 0) {
   for (var i = 0; i < entry.data.length; i++) {
@@ -298,7 +320,7 @@ window.onload = displayAllPapers;
     <li><a href="#" onclick="sorter('ai2', this);">AI2</a></li>
     <li><a href="#" onclick="sorter('mctest', this);">MC Test</a></li>
     <li><a href="#" onclick="sorter('dailymail', this);">DeepMind</a></li>
-    <li><a href="#" onclick="sorter('babi', this);">FB babi</a></li>
+    <li><a href="#" onclick="sorter('fair', this);">FAIR CBT</a></li>
     <li><a href="#" onclick="sorter('squad', this);">SQuAD</a></li>
     <li><a href="#" onclick="sorter('todai', this);">Todai</a></li>
   </ul>
