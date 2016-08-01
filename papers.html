@@ -3,7 +3,23 @@
 <link rel="stylesheet" type="text/css" href="eqa.css">
 <script type="text/javascript">
 var entries = [
-{
+  {
+      author:"Yiming Cui, Zhipeng Chen, Si Wei, Shijin Wang, Ting Liu, and Guoping Hu",
+      title:"Attention-over-Attention Neural Networks for Reading Comprehension",
+      year:"2016",
+      data:["fair", "dailymail"],
+      link:"_papers/1607.04423v2.pdf",
+      bib:"IN_SUB",
+      code:"cui2016"
+  },  {
+      author:"Adam Trischler, Zheng Ye, Xingdi Yuan, and Kaheer Suleman",
+      title:"Natural Language Comprehension with the EpiReader",
+      year:"2016",
+      data:["fair", "dailymail"],
+      link:"_papers/1606.02270v2.pdf",
+      bib:"IN_SUB",
+      code:"trischler2016"
+    }, {
     author:"Dirk Weissenborn",
     title:"Separating Answers from Queries for Neural Reading Comprehension",
     year:"2016",
@@ -12,7 +28,7 @@ var entries = [
     bib:"IN_SUB",
     code:"weissenborn2016"
   }, {
-    author:"Dhingra, Bhuwan and Liu, Hanxiao and Cohen, William W. and Salakhutdinov, Ruslan",
+    author:"Bhuwan Dhingra, Hanxiao Liu, William W. Cohen, and Ruslan Salakhutdinov",
     title:"Gated-Attention Readers for Text Comprehension",
     year:"2016",
     data:["fair", "dailymail"],
@@ -109,7 +125,7 @@ var entries = [
   {author:"Karl Moritz Hermann, Tom&#xe1;&#x0161; Ko&#x010d;isk&#xfd;&#x201a; Edward Grefenstette, Lasse Espeholt, Will Kay, Mustafa Suleyman, and Phil Blunsom",
     title:"Teaching Machines to Read and Comprehend",
     year:"2015",
-    data:["dailymail"], 
+    data:["dailymail"],
     link:"_papers/1506.03340.pdf",
     bib:"_bib/1506.03340.bib",
     venue:"NIPS 2015",
@@ -118,44 +134,44 @@ var entries = [
   {author:"Ellery Smith, Nicola Greco, Matko Bosnjak, and  Andreas Vlachos",
     title:"A Strong Lexical Matching Method for the Machine Comprehension Test",
     year:"2015",
-    data:["mctest"], 
+    data:["mctest"],
     link:"_papers/D15-1197.pdf",
     bib:"_bib/D15-1197.bib",
     venue:"EMNLP 2015",
     code:"smith2015"
   },
-  {author:"Mrinmaya Sachan, Kumar Dubey, Eric Xing, and Matthew Richardson", 
-    title:"Learning Answer-Entailing Structures for Machine Comprehension", 
-    year:"2015", 
-    data:["mctest"], 
-    link:"_papers/P15-1024.pdf", 
+  {author:"Mrinmaya Sachan, Kumar Dubey, Eric Xing, and Matthew Richardson",
+    title:"Learning Answer-Entailing Structures for Machine Comprehension",
+    year:"2015",
+    data:["mctest"],
+    link:"_papers/P15-1024.pdf",
     bib:"_bib/P15-1024.bib",
     venue:"ACL 2015",
     code:"sachan2015"
   },
-  {author:"Hai Wang, Mohit Bansal, Kevin Gimpel, and David McAllester", 
-    title:"Machine Comprehension with Syntax, Frames, and Semantics", 
-    year:"2015", 
-    data:["mctest"], 
-    link:"_papers/P15-2115.pdf", 
+  {author:"Hai Wang, Mohit Bansal, Kevin Gimpel, and David McAllester",
+    title:"Machine Comprehension with Syntax, Frames, and Semantics",
+    year:"2015",
+    data:["mctest"],
+    link:"_papers/P15-2115.pdf",
     bib:"_bib/P15-2115.bib",
     venue:"ACL 2015",
     code:"wang2015"
   },
-  {author:"Karthik Narasimhan and Regina Barzilay", 
-    title:"Machine Comprehension with Discourse Relations", 
-    year:"2015", 
-    data:["mctest"], 
-    link:"_papers/P15-1121.pdf", 
+  {author:"Karthik Narasimhan and Regina Barzilay",
+    title:"Machine Comprehension with Discourse Relations",
+    year:"2015",
+    data:["mctest"],
+    link:"_papers/P15-1121.pdf",
     bib:"_bib/P15-1121.bib",
     venue:"ACL 2015",
     code:"narasimhan2015"
   },
-  {author:"Akira Fujita, Akihiro Kameda, Ai Kawazoe, and Yusuke Miyao", 
-    title:"Overview of Todai Robot Project and Evaluation Framework of its NLP-based Problem Solving", 
-    year:"2014", 
-    data:["todai"], 
-    link:"_papers/todai_overview.pdf", 
+  {author:"Akira Fujita, Akihiro Kameda, Ai Kawazoe, and Yusuke Miyao",
+    title:"Overview of Todai Robot Project and Evaluation Framework of its NLP-based Problem Solving",
+    year:"2014",
+    data:["todai"],
+    link:"_papers/todai_overview.pdf",
     bib:"_bib/todai_overview.bib",
     venue:"LREC 2014",
     code:"fujita2014"
@@ -192,8 +208,8 @@ var entries = [
     link:"_papers/Tian2014.pdf",
     bib:"_bib/Tian2014.bib",
     code:"tian2014"
-  }, 
-*/ 
+  },
+*/
   {author:"Yusuke Miyao and Ai Kawazoe",
     title:"University Entrance Examinations as a Benchmark Resource for NLP-based Problem Solving",
     year:"2013",
@@ -202,8 +218,8 @@ var entries = [
     bib:"_bib/I13-1192.bib",
     venue:"IJCNLP 2013",
     code:"miyao2013"
-  },  
-/*  
+  },
+/*
   {author:"Sumire Uematsu,Takuya Matsuzaki,Hiroki Hanaoka,Yusuke Miyao and Hideki Mima",
     title:"Integrating Multiple Dependency Corpora for Inducing Wide-coverage Japanese CCG Resources",
     year:"2013",
@@ -212,13 +228,13 @@ var entries = [
     bib:"_bib/P13-1103.bib",
     venue:"ACL 2013",
     code:"uematsu2013"
-  },  
-*/  
-  {author:"Takuya Matsuzaki, Hidenao Iwane, Hirokazu Anai and Noriko Arai", 
-    title:"The Complexity of Math Problems -- Linguistic, or Computational?", 
-    year:"2013", 
-    data:["todai"], 
-    link:"_papers/I13-1009.pdf", 
+  },
+*/
+  {author:"Takuya Matsuzaki, Hidenao Iwane, Hirokazu Anai and Noriko Arai",
+    title:"The Complexity of Math Problems -- Linguistic, or Computational?",
+    year:"2013",
+    data:["todai"],
+    link:"_papers/I13-1009.pdf",
     bib:"_bib/I13-1009.bib",
     venue:"JCNLP 2013",
     code:"matsuzaki2013"
@@ -233,37 +249,37 @@ var entries = [
     code:"richardson2013"
   }];
 
-function displayAllPapers() { 
+function displayAllPapers() {
   document.getElementById("pubs").innerHTML="";
   document.getElementById("pubs").innerHTML += "<ul>\n";
   for (var i = 0; i < entries.length; i++) {
     if (i == 0 || entries[i-1].year != entries[i].year) {
-      document.getElementById("pubs").innerHTML += entries[i].year + "<hr width=100%>";      
+      document.getElementById("pubs").innerHTML += entries[i].year + "<hr width=100%>";
     }
     document.getElementById("pubs").innerHTML += "<li>" + format(entries[i]) + "</li>\n";
-  } 
+  }
   document.getElementById("pubs").innerHTML += "</ul>\n";
 }
 
 var last;
 var lastColor;
 function sorter(data, obj) {
-  clearNavColors(); 
+  clearNavColors();
   document.getElementById("pubs").innerHTML="";
   document.getElementById("pubs").innerHTML += "<ul>\n";
   for (var i = 0; i < entries.length; i++) {
     if (contains(entries[i].data, data)) {
       document.getElementById("pubs").innerHTML += "<li>" + format(entries[i]) + "</li>\n";
     }
-  } 
+  }
   document.getElementById("pubs").innerHTML += "</ul>\n";
   obj.style.color="black";
 }
 
 function format(entry) {
   var str = ""
-  str += "<span id=\"paper-title\">" + entry.title + "</span><br>\n" 
-  str += entry.author + "<br>\n"  
+  str += "<span id=\"paper-title\">" + entry.title + "</span><br>\n"
+  str += entry.author + "<br>\n"
     if ('venue' in entry) {
     str += entry.venue + "<br>\n"
   }
@@ -272,13 +288,13 @@ function format(entry) {
   }
   str += "[<a href=" + entry.link + ">paper</a>] \n"
   if (entry.bib != "IN_SUB"){
-    str += "[<a href=" + entry.bib + ">bib</a>]"    
+    str += "[<a href=" + entry.bib + ">bib</a>]"
   }
   if (entry.data.length > 0) {
   for (var i = 0; i < entry.data.length; i++) {
     var dname = entry.data[i];
-      str += "[<a href='results.html#" + entry.code + "' class='" + dname + "button'>" + dname + "</a>]" 
-    } 
+      str += "[<a href='results.html#" + entry.code + "' class='" + dname + "button'>" + dname + "</a>]"
+    }
   }
   return str
 }
@@ -296,13 +312,13 @@ function contains(a, obj) {
 function clearNavColors() {
     var listItems = document.getElementById("center-nav").getElementsByTagName("li");
   for (var i = 0; i < listItems.length; i++) {
-    //  listItems[i].childNodes[0].style.color="#ccc";    
+    //  listItems[i].childNodes[0].style.color="#ccc";
   }
 }
 
 function displayAllHelper(obj) {
-  clearNavColors(); 
-  obj.style.color="black";  
+  clearNavColors();
+  obj.style.color="black";
   displayAllPapers();
 }
 
